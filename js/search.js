@@ -13,6 +13,6 @@ function doSearch() {
 		track.innerHTML = tracks[i].title;
 		result.appendChild(track);
 	}
+
   });
 }
-
