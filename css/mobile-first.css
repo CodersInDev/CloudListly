@@ -37,3 +37,11 @@ body {
     left: 0;
     background-color: #fff;
 }
+#result {
+    list-style-type: none;
+    cursor: pointer;
+}
+#result li:nth-child(2n+1) {  
+  background-color: #ccc;
+}
+
