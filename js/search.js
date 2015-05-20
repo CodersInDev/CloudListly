@@ -1,9 +1,15 @@
+var buttonSearch = document.getElementById("buttonSearch");
+
+buttonSearch.addEventListener("click", doSearch);
+
 function doSearch() {
-	$("#result").empty();
+	var result = document.getElementById("result");
+	result.innerHTML = "";
 	var searched = document.getElementById("searchterm").value;
     SC.get('/tracks', { q: searched }, function(tracks) {
-    $(tracks).each(function(index, track) {
-      $('#result').append($('<li></li>').html(track.title));
-    });
+	    for (var i = 0; i < tracks.length; i++) {
+		result.innerHTML += "<li>" + tracks[i].title + "</li>";
+	}
   });
 }
+
