@@ -34,11 +34,20 @@ Hello
         <form action="#">
             <input type="text" name="searchterm" id="searchterm">
             <input type="button" value='search' id="buttonSearch">
-
         </form>
 
-        <div id='player'></div>
-        <div id='result'></div>
+        <div id='playlist'>
+            <ul id = 'listTracks'></ul>
+        </div>
+
+        <div>
+            <ul id="result"></ul>
+        </div>
+
+        <div id='player'>
+          <audio id="audioPlayer" controls></audio>
+        </div>
+
     </div>
 </div>
 
@@ -46,6 +55,7 @@ Hello
 <script src="js/script.js"></script>
 <script src="js/search.js"></script>
 <script src="js/playlist.js"></script>
+<script src="js/player.js"></script>
 
 </body>
 </html>
