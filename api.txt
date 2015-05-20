@@ -1,0 +1,3 @@
+Client_ID = 3495cef73405762f78396ebe9e88bc92
+
+Client_Secret = dde9740a5ae9b4b2078e147597246a9f
