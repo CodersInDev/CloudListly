@@ -7,6 +7,6 @@ window.onload = function(){
 
 	var player = document.getElementById('player');
 	var track_url = 'http://soundcloud.com/forss/flickermood';
-	
-	SC.oEmbed(track_url, { auto_play: false }, player);
+
+	//SC.oEmbed(track_url, { auto_play: false }, player);
 }
