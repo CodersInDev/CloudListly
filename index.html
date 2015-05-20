@@ -10,14 +10,18 @@ Hello
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>CloudListly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
+
     <link rel="shortcut icon" href="">
-    <link rel="stylesheet" type="text/css" href="css/mobile_first.css" media="screen, handheld" />
+    <link rel="stylesheet" type="text/css" href="css/mobile-first.css" media="screen, handheld" />
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="screen  and (min-width: 48em)"/>
+
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!--[if (lt IE 9)&(!IEMobile)]>
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" />
     <![endif]-->
@@ -26,11 +30,23 @@ Hello
 <div class="container">
     <div class="section1">
         <h1>Main page</h1>
+
+        <form action="#">
+            <input type="text" name="searchterm" id="searchterm">
+            <input type="button" value='search' onclick="doSearch();return false;">
+
+        </form>
+
+        <div id='player'></div>
+        <div id='result'></div>
     </div>
 </div>
 
 
-<script src=""></script>
+<script src="js/script.js"></script>
+<script src="js/search.js"></script>
+<script src="js/playlist.js"></script>
+
 </body>
 </html>
 >>>>>>> e7bea025baf563466ed69065aef1287db6b578a5
