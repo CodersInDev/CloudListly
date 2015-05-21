@@ -15,7 +15,8 @@
 // - next  :: NoParameter -> Maybe HtmlAudioElement
 // - previous :: [HtmlAudioElement] -> Maybe HtmlAudioElement
 // - listEmpty :: NoParameter -> Boolean
-// - searchList :: Text -> side effect (display html) 
+// - searchList :: Text -> side effect (display html)
+
 
 function MyPlayer(idSoundCloud){
 
@@ -103,6 +104,24 @@ function MyPlayer(idSoundCloud){
      SC.get('/tracks', { q: str }, function(tracks) {
         callback(tracks);
     });
-
   }
+
+  this.currentSong = function(){
+    return that.list[that.current];
+  }
+
+  this.updateCurrentSong = function(id){
+    that.list[that.current].pause();
+    //return to the beginning of the song
+    that.list[that.current].currentTime = 0.0;
+    //change the current element
+    that.current = id;
+    //play the new current song
+    if(that.state){
+      that.list[that.current].play();
+    }else{
+      that.list[that.current].pause();
+    }
+  }
+
 }

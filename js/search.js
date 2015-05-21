@@ -16,6 +16,5 @@ buttonSearch.addEventListener("click", function() {
 			};
 			result.insertAdjacentHTML('beforeend', searchResults);
 		}
-	});	
+	});
 });
-
