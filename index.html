@@ -18,62 +18,48 @@
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" />
     <![endif]-->
 </head>
+
 <body>
 
+    <header>
+         <ul id="nav">
+            <li><a href="#" onclick="searchClick()">Search</a></li>
+            <li><a href="#" onclick="playlistClick()">Playlist</a></li>
+        </ul>
+    </header>
 
-<div class="container" id='container'>
-    <div class="section1">
+    <div id="content">
 
-         <div class="tabs">
+        <div id="searchContent">
+            <div id="searchBar">
 
-           <div class="tab" id="search-tab">
-               <input type="radio" id="tab-1" name="tab-group-1" checked>
-               <label for="tab-1">Search</label>
+                <form action="#">
+                    <input type="text" name="searchterm" id="searchterm">
+                    <input type="button" value='search' id="buttonSearch">
+                </form>
 
-               <div class="content">
-
-                    <form action="#">
-                        <input type="text" name="searchterm" id="searchterm">
-                        <input type="button" value='search' id="buttonSearch">
-                    </form>
-
-                    <ul id="result"></ul>
-
-                </div>
-
-           </div>
-
-           <div class="tab" id="playlist-tab">
-
-               <input type="radio" id="tab-2" name="tab-group-1">
-               <label for="tab-2">Playlist</label>
-
-               <div class="content">
-                    <ul id = 'listTracks'></ul>
-                </div>
-
-           </div>
-
-
+            </div>
+            <ul id="result"></ul>
         </div>
+
+        <ul id="listTracks"></ul>
 
     </div>
 
-        <footer>
-          <div id='info'></div>
-          <ul id='player'>
-            <li class=""><a href="#" id='previousButton'>Previous</a></li>
-            <li class=""><a href="#" value='play' id='playPauseButton' class="icon-play">Play</a></li>
-            <li class=""><a href="#" id='nextButton'>Next</a></li>
-          </ul>
-      </footer>
-</div>
+    <footer>
+      <ul id='player'>
+        <li class="controls"><a href="#" id='previousButton'>Previous</a></li>
+        <li class="controls"><a href="#" value='play' id='playPauseButton' class="icon-play">Play</a></li>
+        <li class="controls"><a href="#" id='nextButton'>Next</a></li>
+      </ul>
+    </footer>
 
 <script src="js/superPlayer.js"></script>
 <script src="js/script.js"></script>
 <script src="js/player.js"></script>
 <script src="js/search.js"></script>
 <script src="js/playlist.js"></script>
+<script src="js/navigationTabs.js"></script>
 
 </body>
 </html>
