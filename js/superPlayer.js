@@ -15,6 +15,7 @@
 // - next  :: NoParameter -> Maybe HtmlAudioElement
 // - previous :: [HtmlAudioElement] -> Maybe HtmlAudioElement
 // - listEmpty :: NoParameter -> Boolean
+// - searchList :: Text -> side effect (display html) 
 
 function MyPlayer(idSoundCloud){
 
@@ -96,5 +97,12 @@ function MyPlayer(idSoundCloud){
 
   this.emptyList = function(){
     return (that.list.length > 0) ? true : false;
+  }
+
+  this.searchList = function(str, callback) {
+     SC.get('/tracks', { q: str }, function(tracks) {
+        callback(tracks);
+    });
+
   }
 }
