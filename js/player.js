@@ -10,6 +10,10 @@ nextButton.addEventListener("click", myPlayer.next);
 var previousButton = document.getElementById('previousButton');
 previousButton.addEventListener("click", myPlayer.previous);
 
+var container = document.getElementById('container');
+console.log(container);
+//var currentSong = myPlayer.currentSong();
+//container.addEventListener("ended", function(){console.log("The end of the song")});
 
 function playPause(){
  switch(playPauseButton.getAttribute('value')){
@@ -17,6 +21,7 @@ function playPause(){
     if(myPlayer.play()){
       playPauseButton.setAttribute('value', 'pause');
       playPauseButton.innerHTML = 'pause';
+      myPlayer.currentSong().addEventListener('ended',function(){myPlayer.next()});
     }
     break;
    case 'pause':
