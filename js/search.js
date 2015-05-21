@@ -8,7 +8,6 @@ function doSearch() {
 	var searchResults = "";
 	var searched = document.getElementById("searchterm").value;
     SC.get('/tracks', { q: searched }, function(tracks) {
-			console.log(tracks);
 	    for (var i = 0; i < tracks.length; i++) {
 			//result.innerHTML += "<li class='tracks'>" + tracks[i].title + "</li>";
 			var classStyle = "";
@@ -22,12 +21,6 @@ function doSearch() {
 			}
 			searchResults += "<li id=" + tracks[i].id +" class=" + classStyle +">" + tracks[i].title + "</li>";
 		}
-
-		console.log(searchResults);
 		result.insertAdjacentHTML('beforeend', searchResults);
-
-		// var track = document.createElement('li');
-		// track.innerHTML = tracks[i].title;
-		// result.appendChild(track)
   });
 }

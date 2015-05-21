@@ -12,5 +12,7 @@ result.onclick = function(event) {
     addedTrack.setAttribute('id',target.getAttribute('id'));
     var listTracks = document.getElementById('listTracks');
     listTracks.appendChild(addedTrack);
-    loadSong(target.getAttribute('id'));
+    //create and add the song
+    //createSong(target.getAttribute('id'));
+    myPlayer.add(target.getAttribute('id'));
 }
