@@ -14,94 +14,52 @@
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="screen  and (min-width: 48em)"/>
 
     <script src="http://connect.soundcloud.com/sdk.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!--[if (lt IE 9)&(!IEMobile)]>
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" />
     <![endif]-->
 </head>
+
 <body>
 
+    <header>
+         <ul id="nav">
+            <li><a href="#" onclick="searchClick()">Search</a></li>
+            <li><a href="#" onclick="playlistClick()">Playlist</a></li>
+        </ul>
+    </header>
 
-<div class="container">
-    <div class="section1">
+    <div id="content">
 
-         <div class="tabs">
-            
-           <div class="tab" id="search-tab">
-               <input type="radio" id="tab-1" name="tab-group-1" checked>
-               <label for="tab-1">Search</label>
+        <div id="searchContent">
+            <div id="searchBar">
 
-               <div class="content">
+                <form action="#">
+                    <input type="text" name="searchterm" id="searchterm">
+                    <input type="button" value='search' id="buttonSearch">
+                </form>
 
-                    <form action="#">
-                        <input type="text" name="searchterm" id="searchterm">
-                        <input type="button" value='search' id="buttonSearch">
-                    </form>      
-
-                    <ul id="result"></ul>            
-                
-                </div> 
-
-           </div>
-
-           <div class="tab" id="playlist-tab">
-
-               <input type="radio" id="tab-2" name="tab-group-1">
-               <label for="tab-2">Playlist</label>
-               
-               <div class="content">
-                    <ul id = 'listTracks'></ul>
-                </div>
-
-           </div>
-
-
-        </div>
-
-    </div>
-
-
-<!-- <div class="container">
-    <div class="section1">
-        <h1>Main page</h1>
-
-        <form action="#">
-            <input type="text" name="searchterm" id="searchterm">
-            <input type="button" value='search' id="buttonSearch">
-        </form>
-
-        <div id='playlist'>
-            <ul id = 'listTracks'></ul>
-        </div>
-
-        <div>
+            </div>
             <ul id="result"></ul>
         </div>
 
-<<<<<<< HEAD
-        <div id='player'>
-          <audio id="audioPlayer" controls></audio>
-        </div>
-=======
->>>>>>> gh-pages
-    </div>
-</div> -->
+        <ul id="listTracks"></ul>
 
+    </div>
 
     <footer>
-        <ul id='player'>
-            <li class="controls"><a href="#" class="icon-play"></a></li>
-            
-        </ul>
+      <ul id='player'>
+        <li class="controls"><a href="#" id='previousButton'>Previous</a></li>
+        <li class="controls"><a href="#" value='play' id='playPauseButton' class="icon-play">Play</a></li>
+        <li class="controls"><a href="#" id='nextButton'>Next</a></li>
+      </ul>
     </footer>
 
-</div>
-
-
+<script src="js/superPlayer.js"></script>
 <script src="js/script.js"></script>
+<script src="js/player.js"></script>
 <script src="js/search.js"></script>
 <script src="js/playlist.js"></script>
-<script src="js/player.js"></script>
+<script src="js/navigationTabs.js"></script>
 
 </body>
 </html>
