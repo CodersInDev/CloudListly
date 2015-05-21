@@ -1,3 +1,4 @@
+console.log("hey");
 //play and pause event
 var playPauseButton = document.getElementById('playPauseButton');
 playPauseButton.addEventListener("click", playPause);
@@ -27,3 +28,4 @@ function playPause(){
    default:
     console.log('action not understood')
  }
+}

@@ -19,40 +19,53 @@
     <![endif]-->
 </head>
 <body>
+
+
 <div class="container">
     <div class="section1">
-        <h1>Main page</h1>
 
-        <form action="#">
-            <input type="text" name="searchterm" id="searchterm">
-            <input type="button" value='search' id="buttonSearch">
-        </form>
+         <div class="tabs">
 
-        <div id='playlist'>
-            <ul id = 'listTracks'></ul>
+           <div class="tab" id="search-tab">
+               <input type="radio" id="tab-1" name="tab-group-1" checked>
+               <label for="tab-1">Search</label>
+
+               <div class="content">
+
+                    <form action="#">
+                        <input type="text" name="searchterm" id="searchterm">
+                        <input type="button" value='search' id="buttonSearch">
+                    </form>
+
+                    <ul id="result"></ul>
+
+                </div>
+
+           </div>
+
+           <div class="tab" id="playlist-tab">
+
+               <input type="radio" id="tab-2" name="tab-group-1">
+               <label for="tab-2">Playlist</label>
+
+               <div class="content">
+                    <ul id = 'listTracks'></ul>
+                </div>
+
+           </div>
+
+
         </div>
 
-        <div>
-            <ul id="result"></ul>
-        </div>
+    </div>
 
         <footer>
           <ul id='player'>
-            <li><a href="#" id='previousButton'>Previous</a></li>
-            <li><a href="#" value='play' id='playPauseButton'>Play</a></li>
-            <li><a href="#" id='nextButton'>Next</a></li>
-
-            <!-- <audio id="audioPlayer" controls>Sorry but your browser doesn't support the audio html tag</audio> -->
+            <li class=""><a href="#" id='previousButton'>Previous</a></li>
+            <li class=""><a href="#" value='play' id='playPauseButton' class="icon-play">Play</a></li>
+            <li class=""><a href="#" id='nextButton'>Next</a></li>
           </ul>
       </footer>
-
-        <!-- <footer>
-          <div id='player'>
-            <audio id="audioPlayer" controls>Sorry but your browser doesn't support the audio html tag</audio>
-          </div>
-      </footer> -->
-
-    </div>
 </div>
 
 <script src="js/superPlayer.js"></script>

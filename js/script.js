@@ -1,6 +1,7 @@
 var idSoundCloud = '3495cef73405762f78396ebe9e88bc92';
 var myPlayer = new MyPlayer(idSoundCloud);
-window.onload = function(){
+console.log("ok");
+// window.onload = function(){
 	// var idSoundCloud = '3495cef73405762f78396ebe9e88bc92';
 	// var myPlayer = new MyPlayer(idSoundCloud);
 	// SC.initialize({
@@ -8,4 +9,6 @@ window.onload = function(){
 	// });
 	//player = new SuperPlayer();
 	//player.play();
-}
+// }
+
+console.log("bob");
