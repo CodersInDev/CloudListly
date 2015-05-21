@@ -45,15 +45,15 @@ body {
 
 
 /*body {
-   background: #999;  
-   padding: 20px 40px; 
+   background: #999;
+   padding: 20px 40px;
 }*/
 
 
 
 .tabs {
-  position: relative;   
-  min-height: 100%; 
+  position: relative;
+  min-height: 100%;
   clear: both;
   margin: 35px 0 25px;
   background: white;
@@ -67,18 +67,18 @@ body {
 
 
 .tab label {
-  background: #eee; 
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  margin-left: -1px; 
+  background: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-left: -1px;
   position: relative;
-  left: 1px; 
+  left: 1px;
   top: -29px;
   -webkit-transition: background-color .17s linear;
 }
 
 .tab [type=radio] {
-  display: none;   
+  display: none;
 }
 
 
@@ -92,7 +92,7 @@ body {
   right: 0;
   bottom: 0;
 /*  padding: 20px;
-*//*  border: 1px solid #ccc; 
+*//*  border: 1px solid #ccc;
 */  -webkit-transition: opacity .6s linear;
   opacity: 0;
 }
@@ -126,12 +126,14 @@ footer {
     list-style-type: none;
     cursor: pointer;
 }
+
 /*#result li:nth-child(2n+1) {  */
   /*background-color: #ccc;*/
 /*}*/
 
 #listTracks li {
     color: green;
+
 }
 /************result list**************/
 #result ul{
@@ -200,9 +202,9 @@ li {
   speak: none;
 }
 
-.icon-play:after     { content: "\25b6"; } 
-.icon-cog:after      { content: "\2699"; } 
-.icon-cw:after       { content: "\27f3"; } 
+.icon-play:after     { content: "\25b6"; }
+.icon-cog:after      { content: "\2699"; }
+.icon-cw:after       { content: "\27f3"; }
 .icon-location:after { content: "\e724"; }
 
 #aplayer {
@@ -220,10 +222,10 @@ li {
   display: block;
   background-color: #f7f7f7;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
   color: #a7a7a7;
   text-decoration: none;
   width: 44px;
@@ -252,5 +254,12 @@ li {
   z-index: -1;
 }
 
+.nonStreamable{
+  color: red;
+}
+
+.downloadable{
+  color: green;
+}
 
 /************ end of audioPlayer **************/

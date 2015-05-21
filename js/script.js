@@ -1,12 +1,14 @@
 var idSoundCloud = '3495cef73405762f78396ebe9e88bc92';
+var myPlayer = new MyPlayer(idSoundCloud);
+console.log("ok");
+// window.onload = function(){
+	// var idSoundCloud = '3495cef73405762f78396ebe9e88bc92';
+	// var myPlayer = new MyPlayer(idSoundCloud);
+	// SC.initialize({
+	//  	client_id: '3495cef73405762f78396ebe9e88bc92'
+	// });
+	//player = new SuperPlayer();
+	//player.play();
+// }
 
-window.onload = function(){
-	SC.initialize({
-	 	client_id: idSoundCloud
-	});
-
-	var player = document.getElementById('player');
-	var track_url = 'http://soundcloud.com/forss/flickermood';
-
-	//SC.oEmbed(track_url, { auto_play: false }, player);
-}
+console.log("bob");
