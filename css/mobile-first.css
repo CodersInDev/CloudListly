@@ -42,19 +42,22 @@ header {
     position: fixed;
     top: 0;
 }
+
 #content {
     width: 100%;
     margin: 0 auto;
     /*padding: 60px 0;*/
 }
+
 footer {
     width: 100%;
     /*height: 60px;*/
     /*background: red;*/
     position: fixed;
     bottom: 0;
-
 }
+
+
 /************ navigation tabs**************/
 ul {
     margin: 0;
@@ -64,6 +67,7 @@ ul {
 li {
     list-style-type: none;
 }
+
 #nav {
     display: table;
     table-layout: fixed;
@@ -95,6 +99,7 @@ form {
   width: 21%;
   margin: 0 auto;
   padding:10px;
+
 }
 
 
@@ -105,7 +110,16 @@ form {
     background-color: #584f4d;
     border:none;
     padding: 0;
-    margin: 0;}
+    margin: 0;
+}
+
+#searchterm {
+    margin: 10px;
+}
+
+label {
+    width: 50%;
+}
 
 li {
     
@@ -176,9 +190,9 @@ li {
   speak: none;
 }
 
-.icon-play:after     { content: "\25b6"; } 
-.icon-cog:after      { content: "\2699"; } 
-.icon-cw:after       { content: "\27f3"; } 
+.icon-play:after     { content: "\25b6"; }
+.icon-cog:after      { content: "\2699"; }
+.icon-cw:after       { content: "\27f3"; }
 .icon-location:after { content: "\e724"; }
 
 #aplayer {
@@ -197,10 +211,10 @@ li {
   display: block;
   background-color: #f7f7f7;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
   color: #a7a7a7;
   text-decoration: none;
   width: 44px;
@@ -230,4 +244,7 @@ li {
   z-index: -1;
 }
 
+
 /************ end of audioPlayer **************/
+
+

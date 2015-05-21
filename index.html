@@ -14,11 +14,11 @@
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="screen  and (min-width: 48em)"/>
 
     <script src="http://connect.soundcloud.com/sdk.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!--[if (lt IE 9)&(!IEMobile)]>
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" />
     <![endif]-->
 </head>
+
 
 <body>
 
@@ -47,21 +47,21 @@
 
     </div>       
 
-
     <footer>
-    <!-- <div id="info"></div> -->
-        <ul id='player'>
-            <li class="controls"><a href="#" class="icon-play"></a></li>           
-        </ul>
+      <ul id='player'>
+        <li class="controls"><a href="#" id='previousButton'>Previous</a></li>
+        <li class="controls"><a href="#" value='play' id='playPauseButton' class="icon-play">Play</a></li>
+        <li class="controls"><a href="#" id='nextButton'>Next</a></li>
+      </ul>
     </footer>
 
 
-
-<script src="js/navigationTabs.js"></script>
+<script src="js/superPlayer.js"></script>
 <script src="js/script.js"></script>
+<script src="js/player.js"></script>
 <script src="js/search.js"></script>
 <script src="js/playlist.js"></script>
-<script src="js/player.js"></script>
+<script src="js/navigationTabs.js"></script>
 
 </body>
 </html>
