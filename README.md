@@ -1,6 +1,10 @@
 # CloudListly
 
-CloudListly is a mobile first application which give you the opportunity to create your own playlist using tracks from soundcloud.
+CloudListly is a mobile first application which give you the opportunity to create your own playlist using tracks from soundcloud. You can find it [here](http://codersindev.github.io/CloudListly/).  
+
+**To start a code review, fork the repo, clone it, then load the link above. If you really want to run the files from your local machine, you need to run a server - like harp or simple python server**  
+
+* python -m SimpleHTTPServer  
 
 ## At the moment
 
