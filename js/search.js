@@ -25,11 +25,11 @@ buttonSearch.addEventListener("click", function() {
           var liSong = li.cloneNode(li);
 					liSong.setAttribute('value',myPlayer.list.length);
 					myPlayer.add(song.id);
-          playlistTag.innerHTML = 'Playlist - ' + myPlayer.list.length;
           liSong.addEventListener("click", function(){
             myPlayer.updateCurrentSong(liSong.value);
           });
 					listTracks.appendChild(liSong);
+          myPlayer.list.length? playlistTag.innerHTML = 'Playlist - ' + myPlayer.list.length : playlistTag.innerHTML = 'Playlist - 1' ;
 				});
         resultList.appendChild(li);
 			};
