@@ -143,14 +143,14 @@ form {
     outline:none;
     background: #ffffff;
     margin: 10px;
-    width: 100px;
+    width: 80px;
     height: 40px;
     /*background: #2b303b;*/
     border-color:transparent;
     font-size: 10pt;
     float: left;
     color: #262626;
-    padding-left: 45px;
+    padding-left: 35px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -241,6 +241,7 @@ li {
 }*/
 
 .icon-play:after     { content: "\25b6"; }
+
 /*.icon-fast-bw:before { content: '\e800'; } 
 .icon-to-start:before { content: '\e801'; }  
 .icon-play:before { content: '\e802'; } 
