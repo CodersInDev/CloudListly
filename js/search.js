@@ -24,6 +24,9 @@ buttonSearch.addEventListener("click", function() {
           var liSong = li.cloneNode(li);
 					liSong.setAttribute('value',myPlayer.list.length);
 					myPlayer.add(song.id);
+          liSong.addEventListener("click", function(){
+            myPlayer.updateCurrentSong(liSong.value);
+          });
 					listTracks.appendChild(liSong);
 				});
 				result.appendChild(li);
