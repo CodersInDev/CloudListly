@@ -14,18 +14,20 @@ With the application you can:
 
 * Search songs and view a list of the results
 * Select songs from the results and add them to your playlist
-* Play a default song from soundcloud (track 293)
+* Play your playlist, starting from a song of your choice
+* Play and pause your playlist, and skip forwards and backwards
+* Navigate between the search page and your playlist page using tabs
+* Use the 'info' button to see more information about the current playing song
 * Run some tests
 
 #### Work to do next
 
 With the application you will be able to
 
-* Play, pause, reset your playlist
-* Go to the next and previous song on you playlist
-* Navigate between the search page and your playlist page using tabs
+* Reset your playlist
 * Be able to search songs dynamically
-* add styling to the application
+* See in the player what song is now playing
+* See which tracks in the results list have already been added to the playlist
 
 ##How?
 
