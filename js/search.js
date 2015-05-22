@@ -12,7 +12,7 @@ buttonSearch.addEventListener("click", function() {
 			var li = document.createElement('li');
 			li.innerHTML = "No songs match your search query - try to have more mainstream taste next time";
 			li.addEventListener("click", function(){console.log("click on the non result")});
-			result.appendChild(li);
+      resultList.appendChild(li);
 		}
 		list.forEach(function(song){
 			if(song.streamable){
@@ -29,8 +29,19 @@ buttonSearch.addEventListener("click", function() {
           });
 					listTracks.appendChild(liSong);
 				});
-				result.appendChild(li);
+        resultList.appendChild(li);
 			};
 		});
 	});
 });
+
+//if enter key is pressed, stop page refreshing and simulate button click
+searchBox.addEventListener("keypress", function(e) {
+	e = e || window.event
+	if (e.keyCode == 13) {	
+		e.preventDefault();
+		buttonSearch.click();
+	}
+});
+
+

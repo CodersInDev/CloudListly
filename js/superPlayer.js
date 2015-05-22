@@ -12,10 +12,11 @@
 // - play :: NoParameter -> Boolean + side effect (play the song)
 // - add :: TextUrl -> [HtmlAudioElement]
 // - pause :: HtmlAudioElement -> Boolean + side effect (pause the song)
-// - next  :: NoParameter -> Maybe HtmlAudioElement
-// - previous :: [HtmlAudioElement] -> Maybe HtmlAudioElement
+// - next  :: NoParameter -> Boolean(there is a next song or not)
+// - previous :: [HtmlAudioElement] -> Boolean(there is a previous song or not)
 // - listEmpty :: NoParameter -> Boolean
 // - searchList :: Text -> side effect (display html)
+// - beginning :: noParameter -> noReturnValue //return to the first element of the list
 
 
 function MyPlayer(idSoundCloud){
@@ -73,8 +74,10 @@ function MyPlayer(idSoundCloud){
       }else{
         that.list[that.current].pause();
       }
+      return true;
     }else{
       console.log("No next song to play!")
+      return false;
     }
   };
 
@@ -91,8 +94,10 @@ function MyPlayer(idSoundCloud){
       }else{
         that.list[that.current].pause();
       }
+      return true;
     }else{
       console.log("No previous song to play!")
+      return false;
     }
   }
 
@@ -122,6 +127,22 @@ function MyPlayer(idSoundCloud){
     }else{
       that.list[that.current].pause();
     }
+  }
+
+  this.beginning = function(){
+    that.current = 0;
+  }
+
+  //gets current song ID
+  this.getCurrentSongId = function(){
+    return that.list[that.current].src.split("/")[4];
+  };
+
+  //returns song object to access attributes (title/duration etc.)
+  this.getCurrentSongObj = function(callback){
+    SC.get('/tracks/' + that.getCurrentSongId(), {}, function(track) {
+      return callback(track);
+    });
   }
 
 }
