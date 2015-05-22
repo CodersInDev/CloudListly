@@ -28,7 +28,13 @@ function playPause(){
     if(myPlayer.play()){
       playPauseButton.setAttribute('value', 'pause');
       playPauseButton.innerHTML = 'pause';
-      myPlayer.currentSong().addEventListener('ended',function(){myPlayer.next()});
+      myPlayer.currentSong().addEventListener('ended',function(){
+        if(!myPlayer.next()){
+          myPlayer.beginning();
+          playPauseButton.setAttribute('value', 'play');
+          playPauseButton.innerHTML = 'play';
+        }
+      });
     }
     break;
    case 'pause':

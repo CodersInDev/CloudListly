@@ -15,26 +15,29 @@ html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, 
     padding: 0;
     border: 0;
 }
+
 ol, ul {
     list-style: none;
 }
+
 header, footer, nav, section, article, hgroup, figure {
     display: block;
 }
+
 legend {
     display: none;
 }
 /************End Reset**************/
 
 /************Global**************/
-/*1em = 16px*/
-
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    background: #f7f7f7 url(../images/bg.png) repeat center top;
 }
+
 header {
     width: 100%;
     /*height: 60px;*/
@@ -47,6 +50,7 @@ header {
     width: 100%;
     margin: 0 auto;
     /*padding: 60px 0;*/
+    background: #f7f7f7 url(../images/bg.png) repeat center top;
 }
 
 footer {
@@ -55,7 +59,9 @@ footer {
     /*background: red;*/
     position: fixed;
     bottom: 0;
+    border-top:1px solid orange;
 }
+/************ end globals**************/
 
 
 /************ navigation tabs**************/
@@ -73,6 +79,7 @@ li {
     table-layout: fixed;
     text-align: center;
 }
+
 #nav li {
     display: table-cell;
     width: 50%;
@@ -80,51 +87,103 @@ li {
     height: auto;
     font-size: 20px;
     vertical-align: bottom;
-    background-color: white;
+    background: #f7f7f7 url(../images/bg.png) repeat center top;
     border: none;
 }
+
 #nav a {
     display: block;
     min-height: 50%;
     padding: 4px 10px;
-    background-color: yellow;
+    background-color: orange;
     color: white;
     border-radius: 6px 6px 0 0;
+    text-decoration: none;
 }
 
+#nav a:hover {
+  background-color: rgb(226, 155, 24);
+}
 /************ end navigation tabs**************/
 
+/************ search bar**************/
 form {
   position: relative;
-  width: 21%;
+  /*width: 21%;*/
   margin: 0 auto;
   padding:10px;
 
 }
 
+#searchBar {
+  position:fixed;
+  z-index: 9;
+  top:40px;
+  width: 100%;
+  height:50px;
+  background: #f7f7f7 url(../images/bg.png) repeat center top;
+}
 
+#searchterm {
+    outline:none;
+    background: #ffffff;
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+    /*background: #2b303b;*/
+    border-color:transparent;
+    font-size: 10pt;
+    float: left;
+    color: #262626;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+ 
+   
+    -webkit-transition: background .55s ease;
+    -moz-transition: background .55s ease;
+    -ms-transition: background .55s ease;
+    -o-transition: background .55s ease;
+    transition: background .55s ease;
+}
+#searchterm:focus {
+  border: 1px solid orange;
+}
+
+#buttonSearch {
+  width: 100px;
+  height: 40px;
+  margin: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+ background-color: orange;
+ border-color:orange;
+ 
+}
+#buttonSearch:hover {
+  background-color: rgb(226, 155, 24);
+}
+/************ end search bar**************/
 
 /************ styling list tracks**************/
+#result {
+  padding-top: 130px;
+}
+
 #result ul{
-  
     background-color: #584f4d;
     border:none;
     padding: 0;
     margin: 0;
 }
 
-#searchterm {
-    margin: 10px;
-}
-
-label {
-    width: 50%;
-}
-
 li {
-    
-    color: #fff;
-    
+    background: #f7f7f7 url(../images/bg.png) repeat center top;
+    border-top: 1px solid #D8E4E1;
+    border-bottom: 1px solid #BCBEBE;
+    cursor: pointer;
     font-size: 0.8em;
     /*letter-spacing: .05em;*/
     list-style-type: none;
@@ -133,69 +192,60 @@ li {
     /*padding-left: 1em;*/
     /*padding-top: 5px;*/
     padding:5px;
-    background-color: #1F1C1B;
-    color: #fff;
+    /*background-color: #1F1C1B;*/
+    color: #323030;
     /*text-shadow: 2px 2px 1px #51290D;*/
-    border-top: 1px solid #282D2C;
-    border-bottom: 1px solid #0C0D0D;
+    /*border-top: 1px solid #282D2C;
+    border-bottom: 1px solid #0C0D0D;*/
+    cursor: pointer;
 }
-
-/************ end styling list tracks**************/
 
 #listTracks {
   display: none;
+  padding-top: 42px;
 }
-/*#searchContent {
-  position: absolute;
-}*/
-#searchBar {
-  position:fixed;
-  z-index: 9;
-  top:40px;
-  width: 100%;
-  height:50px;
-  background-color: black;
-
-}
+/************ end styling list tracks**************/
 
 
-/************ end result list**************/
-
-
-
-/************ audioPlayer **************/
-/*#audioPlayer {
-    background-color: darkorange;
-    z-index: 999;
-    width: 100%;
-    bottom: 0;
-}*/
-
+/************ player controls**************/
 .controls{
     border: none;
-    background-color: red;
+    background: #f7f7f7 url(../images/bg.png) repeat center top;
     z-index: 999;
-    width: 100%;
+    width: auto;
     bottom: 0;
-    padding:10px 0px;
+    padding: 20px 10px;
+    display: inline-block;
 }
 
-
-
-
-[class*=" icon-"] {
+/*[class*=" icon-"] {
   font-family: 'fontello';
   font-style: normal;
   font-size: 3em;
   speak: none;
-}
+}*/
 
 .icon-play:after     { content: "\25b6"; }
-.icon-cog:after      { content: "\2699"; }
-.icon-cw:after       { content: "\27f3"; }
-.icon-location:after { content: "\e724"; }
+/*.icon-fast-bw:before { content: '\e800'; } 
+.icon-to-start:before { content: '\e801'; }  
+.icon-play:before { content: '\e802'; } 
+.icon-fast-fw:before { content: '\e803'; }*/ 
 
-#aplayer {
+.info {
+  float: right;
+}
+#infoButton {
+  float: right;
+  border: none;
+}
+li.info {
+  border:none;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+#player {
+  width: 100%;
   list-style: none;
   text-align: center;
 
@@ -224,7 +274,6 @@ li {
   line-height: 44px;
   border-radius: 50%;
   box-shadow: 0px 2px 2px #aaa, inset 0px 1px 1px #fff;
-  /*left: 47%;*/
   margin: 0 auto;
 }
 #player a:hover{
@@ -235,16 +284,14 @@ li {
 #player li:before {
   content: "";
   display: block;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #fff;
+  /*border-top: 1px solid #ddd;
+  border-bottom: 1px solid #fff;*/
   width: 100%;
   height: 1px;
   position: absolute;
   top: 50%;
   z-index: -1;
 }
-
-
-/************ end of audioPlayer **************/
+/************ end player controls **************/
 
 
