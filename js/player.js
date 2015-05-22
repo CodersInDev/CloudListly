@@ -31,9 +31,9 @@ function playPause(){
       playPauseButton.innerHTML = '||';
       myPlayer.currentSong().addEventListener('ended',function(){
         if(!myPlayer.next()){
-          myPlayer.beginning();
-          // playPauseButton.setAttribute('value', 'play');
           playPauseButton.setAttribute('class', 'icon-play');
+          playPauseButton.innerHTML = '';
+          myPlayer.beginning();
         }
       });
     }
@@ -43,9 +43,9 @@ function playPause(){
      playPauseButton.setAttribute('value', 'play');
      playPauseButton.innerHTML = '';
      playPauseButton.setAttribute('class', 'icon-play');
+
     break;
    default:
     console.log('action not understood')
  }
 }
-

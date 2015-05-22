@@ -84,6 +84,7 @@ li {
 
 #nav li {
     display: table-cell;
+    font-family: 'Raleway', sans-serif;
     width: 50%;
     padding-right: 1px;
     height: auto;
@@ -154,8 +155,8 @@ form {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
- 
-   
+
+
     -webkit-transition: background .55s ease;
     -moz-transition: background .55s ease;
     -ms-transition: background .55s ease;
@@ -175,16 +176,18 @@ form {
   border-radius: 5px;
  background-color: orange;
  border-color:orange;
- 
+
 }
 #buttonSearch:hover {
   background-color: rgb(226, 155, 24);
+  border: none;
 }
 /************ end search bar**************/
 
 /************ styling list tracks**************/
 #result {
   padding-top: 130px;
+  padding-bottom: 70px;
 }
 
 #result ul{
@@ -213,11 +216,13 @@ li {
     /*border-top: 1px solid #282D2C;
     border-bottom: 1px solid #0C0D0D;*/
     cursor: pointer;
+    font-family: 'Raleway', sans-serif;
 }
 
 #listTracks {
   display: none;
   padding-top: 42px;
+  padding-bottom: 70px;
 }
 /************ end styling list tracks**************/
 
@@ -241,11 +246,6 @@ li {
 }*/
 
 .icon-play:after     { content: "\25b6"; }
-
-/*.icon-fast-bw:before { content: '\e800'; } 
-.icon-to-start:before { content: '\e801'; }  
-.icon-play:before { content: '\e802'; } 
-.icon-fast-fw:before { content: '\e803'; }*/ 
 
 .info {
   /*float: right;*/
@@ -311,5 +311,3 @@ li.info {
   z-index: -1;
 }
 /************ end player controls **************/
-
-
