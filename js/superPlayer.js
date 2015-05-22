@@ -133,4 +133,16 @@ function MyPlayer(idSoundCloud){
     that.current = 0;
   }
 
+  //gets current song ID
+  this.getCurrentSongId = function(){
+    return that.list[that.current].src.split("/")[4];
+  };
+
+  //returns song object to access attributes (title/duration etc.)
+  this.getCurrentSongObj = function(callback){
+    SC.get('/tracks/' + that.getCurrentSongId(), {}, function(track) {
+      return callback(track);
+    });
+  }
+
 }
