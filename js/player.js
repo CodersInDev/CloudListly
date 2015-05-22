@@ -11,7 +11,6 @@ var previousButton = document.getElementById('previousButton');
 previousButton.addEventListener("click", myPlayer.previous);
 
 var container = document.getElementById('container');
-console.log(container);
 //var currentSong = myPlayer.currentSong();
 //container.addEventListener("ended", function(){console.log("The end of the song")});
 
@@ -21,7 +20,13 @@ function playPause(){
     if(myPlayer.play()){
       playPauseButton.setAttribute('value', 'pause');
       playPauseButton.innerHTML = 'pause';
-      myPlayer.currentSong().addEventListener('ended',function(){myPlayer.next()});
+      myPlayer.currentSong().addEventListener('ended',function(){
+        if(!myPlayer.next()){
+          myPlayer.beginning();
+          playPauseButton.setAttribute('value', 'play');
+          playPauseButton.innerHTML = 'play';
+        }
+      });
     }
     break;
    case 'pause':
