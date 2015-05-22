@@ -27,13 +27,13 @@ function playPause(){
    case 'play':
     if(myPlayer.play()){
       playPauseButton.setAttribute('value', 'pause');
-      // playPauseButton.setAttribute('class', 'controls');
-      // playPauseButton.setAttribute('class', 'icon-pause');
+      playPauseButton.setAttribute('class', '');
+      playPauseButton.innerHTML = '||';
       myPlayer.currentSong().addEventListener('ended',function(){
         if(!myPlayer.next()){
+          playPauseButton.setAttribute('class', 'icon-play');
+          playPauseButton.innerHTML = '';
           myPlayer.beginning();
-          playPauseButton.setAttribute('value', 'play');
-          // playPauseButton.setAttribute('class', 'icon-play');
         }
       });
     }
@@ -41,8 +41,9 @@ function playPause(){
    case 'pause':
      myPlayer.pause();
      playPauseButton.setAttribute('value', 'play');
-    //  playPauseButton.innerHTML = '';
-    //  playPauseButton.setAttribute('class', 'icon-play');
+     playPauseButton.innerHTML = '';
+     playPauseButton.setAttribute('class', 'icon-play');
+
     break;
    default:
     console.log('action not understood')

@@ -167,7 +167,7 @@ form {
 }
 
 #buttonSearch {
-  width: 100px;
+  width: 80px;
   height: 40px;
   margin: 12px;
   -webkit-border-radius: 5px;
@@ -248,10 +248,10 @@ li {
 .icon-fast-fw:before { content: '\e803'; }*/
 
 .info {
-  float: right;
+  /*float: right;*/
 }
 #infoButton {
-  float: right;
+  /*float: right;*/
   border: none;
 }
 li.info {
