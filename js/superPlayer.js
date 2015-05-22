@@ -10,7 +10,7 @@
 
 // functions:
 // - play :: NoParameter -> Boolean + side effect (play the song)
-// - add :: Text -> [HtmlAudioElement]
+// - add :: TextUrl -> [HtmlAudioElement]
 // - pause :: HtmlAudioElement -> Boolean + side effect (pause the song)
 // - next  :: NoParameter -> Maybe HtmlAudioElement
 // - previous :: [HtmlAudioElement] -> Maybe HtmlAudioElement
@@ -51,11 +51,11 @@ function MyPlayer(idSoundCloud){
   };
 
   this.add = function(idSong){
+    //that.list.push(new Audio(song.uri));
     //create the song from the url
     SC.stream("/tracks/" + idSong, function(sound){
         that.list.push(new Audio(sound.url));
     });
-    //this.list.push(song);
     return this.list
   };
 

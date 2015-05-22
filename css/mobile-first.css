@@ -57,6 +57,10 @@ footer {
     bottom: 0;
 }
 
+.clickable{
+  cursor: pointer;
+  color: red;
+}
 
 /************ navigation tabs**************/
 ul {
@@ -106,7 +110,7 @@ form {
 
 /************ styling list tracks**************/
 #result ul{
-  
+
     background-color: #584f4d;
     border:none;
     padding: 0;
@@ -122,9 +126,9 @@ label {
 }
 
 li {
-    
+
     color: #fff;
-    
+    cursor: pointer;
     font-size: 0.8em;
     /*letter-spacing: .05em;*/
     list-style-type: none;
@@ -246,5 +250,3 @@ li {
 
 
 /************ end of audioPlayer **************/
-
-
