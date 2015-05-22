@@ -19,8 +19,8 @@ result.onclick = function(event) {
     myPlayer.add(target.getAttribute('id'));
 }
 
+//Start playlist from the song in the playlist that is clicked 
 listTracks.onclick = function(event) {
-  console.log("click on the playlist");
     var target = getEventTarget(event);
     myPlayer.updateCurrentSong(target.getAttribute('value'));
 }

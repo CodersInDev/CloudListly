@@ -18,3 +18,14 @@ buttonSearch.addEventListener("click", function() {
 		}
 	});
 });
+
+//if enter key is pressed, stop page refreshing and simulate button click
+searchBox.addEventListener("keypress", function(e) {
+	e = e || window.event
+	if (e.keyCode == 13) {	
+		e.preventDefault();
+		buttonSearch.click();
+	}
+});
+
+
