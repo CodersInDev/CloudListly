@@ -55,6 +55,7 @@ footer {
     /*background: red;*/
     position: fixed;
     bottom: 0;
+    margin: 0 auto;
 }
 
 
@@ -95,16 +96,20 @@ li {
 /************ end navigation tabs**************/
 
 form {
-  position: relative;
-  width: 21%;
+  position: absolute;
+  left:10px;
+  width: 100%;
   margin: 0 auto;
-  padding:10px;
-
+  padding:6px;
 }
 
 
 
 /************ styling list tracks**************/
+#result {
+  padding-top:90px;
+}
+
 #result ul{
   
     background-color: #584f4d;
@@ -115,10 +120,6 @@ form {
 
 #searchterm {
     margin: 10px;
-}
-
-label {
-    width: 50%;
 }
 
 li {
@@ -143,11 +144,13 @@ li {
 /************ end styling list tracks**************/
 
 #listTracks {
+  padding-top:42px;
   display: none;
 }
 /*#searchContent {
   position: absolute;
 }*/
+
 #searchBar {
   position:fixed;
   z-index: 9;
@@ -155,7 +158,6 @@ li {
   width: 100%;
   height:50px;
   background-color: black;
-
 }
 
 
@@ -171,13 +173,22 @@ li {
     bottom: 0;
 }*/
 
+
+#player{
+  /*width: 100%;*/
+  background-color: red;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .controls{
     border: none;
     background-color: red;
     z-index: 999;
-    width: 100%;
+    width: auto;
     bottom: 0;
-    padding:10px 0px;
+    padding:10px 5px;
+    display: inline-block;
 }
 
 
