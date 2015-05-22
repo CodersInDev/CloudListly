@@ -2,6 +2,7 @@ var buttonSearch = document.getElementById("buttonSearch");
 var searchBox = document.getElementById("searchterm");
 var resultList = document.getElementById("result");
 var listTracks = document.getElementById('listTracks');
+var playlistTag = document.getElementById('playlistTag');
 
 buttonSearch.addEventListener("click", function() {
   resultList.innerHTML= "";
@@ -28,6 +29,7 @@ buttonSearch.addEventListener("click", function() {
             myPlayer.updateCurrentSong(liSong.value);
           });
 					listTracks.appendChild(liSong);
+          myPlayer.list.length? playlistTag.innerHTML = 'Playlist - ' + myPlayer.list.length : playlistTag.innerHTML = 'Playlist - 1' ;
 				});
         resultList.appendChild(li);
 			};
@@ -38,10 +40,8 @@ buttonSearch.addEventListener("click", function() {
 //if enter key is pressed, stop page refreshing and simulate button click
 searchBox.addEventListener("keypress", function(e) {
 	e = e || window.event
-	if (e.keyCode == 13) {	
+	if (e.keyCode == 13) {
 		e.preventDefault();
 		buttonSearch.click();
 	}
 });
-
-
