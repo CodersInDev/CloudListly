@@ -27,12 +27,13 @@ function playPause(){
    case 'play':
     if(myPlayer.play()){
       playPauseButton.setAttribute('value', 'pause');
-      playPauseButton.innerHTML = 'pause';
+      // playPauseButton.setAttribute('class', 'controls');
+      // playPauseButton.setAttribute('class', 'icon-pause');
       myPlayer.currentSong().addEventListener('ended',function(){
         if(!myPlayer.next()){
           myPlayer.beginning();
           playPauseButton.setAttribute('value', 'play');
-          playPauseButton.innerHTML = 'play';
+          // playPauseButton.setAttribute('class', 'icon-play');
         }
       });
     }
@@ -40,10 +41,10 @@ function playPause(){
    case 'pause':
      myPlayer.pause();
      playPauseButton.setAttribute('value', 'play');
-     playPauseButton.innerHTML = 'play';
+    //  playPauseButton.innerHTML = '';
+    //  playPauseButton.setAttribute('class', 'icon-play');
     break;
    default:
     console.log('action not understood')
  }
 }
-
