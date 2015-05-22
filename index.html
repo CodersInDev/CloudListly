@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="css/mobile-first.css" media="screen, handheld" />
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="screen  and (min-width: 48em)"/>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
     <script src="http://connect.soundcloud.com/sdk.js"></script>
     <!--[if (lt IE 9)&(!IEMobile)]>
     <link rel="stylesheet" type="text/css" href="css/enhanced.css" />
@@ -39,7 +39,14 @@
                 </form>
 
             </div>
-            <ul id="result"></ul>
+            <ul id="result">
+                <div id="welcomeText">
+                <h1>Welcome to CloudListly</h1>
+                <h4>A SoundCloud playlist app by CodersInDev</h4>
+                <p>Use the search bar to find your favourite tracks on SoundCloud, and add songs to your playlist by clicking on them. View your added songs in the Playlist tab, and use the player at the bottom to control what you hear.</p>
+            </div>
+            </ul>
+            
         </div>
 
         <ul id="listTracks"></ul>
@@ -49,6 +56,9 @@
     <footer> 
         <p>Now playing</p>
       <ul id='player'>
+
+      <div id="infoBox"></div>
+
         <li class="controls"><a href="#" id='previousButton'><<</a></li>
         <li class="controls"><a href="#" value='play' id='playPauseButton' class="icon-play"></a></li>
         <li class="controls"><a href="#" id='nextButton'>>></a></li>

@@ -10,9 +10,17 @@ nextButton.addEventListener("click", myPlayer.next);
 var previousButton = document.getElementById('previousButton');
 previousButton.addEventListener("click", myPlayer.previous);
 
-var container = document.getElementById('container');
-//var currentSong = myPlayer.currentSong();
-//container.addEventListener("ended", function(){console.log("The end of the song")});
+var infoButton = document.getElementById('infoButton');
+infoButton.addEventListener("click", function(){
+	myPlayer.getCurrentSongObj(displaySongInfo);
+});
+
+var infoBox = document.getElementById('infoBox');
+
+function displaySongInfo(song){
+ 	infoBox.innerHTML = "Track title : " + song.title + "</br>Genre : " + song.genre + "</br>Duration : " + song.duration + "</br>Label : " + song.label_name + "</br>Year released : " + song.release_year;
+ 	console.log(infoBox.innerHTML)
+}
 
 function playPause(){
  switch(playPauseButton.getAttribute('value')){
@@ -38,3 +46,4 @@ function playPause(){
     console.log('action not understood')
  }
 }
+

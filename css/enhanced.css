@@ -1,1 +1,9 @@
 /*this rules are for screen 48em = 768px*/
+#searchBar {
+}
+#searchterm {
+	width: 300px;
+}
+#welcomeText {
+	font-size: 16px;
+}
