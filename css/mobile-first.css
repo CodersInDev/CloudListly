@@ -128,7 +128,7 @@ form {
   /*width: 21%;*/
   margin: 0 auto;
   padding:10px;
-
+  display: inline-block;
 }
 
 #searchBar {
@@ -138,6 +138,7 @@ form {
   width: 100%;
   height:80px;
   background: #f7f7f7 url(../images/bg.png) repeat center top;
+  text-align: center;
 }
 
 #searchterm {
