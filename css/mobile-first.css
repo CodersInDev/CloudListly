@@ -84,6 +84,7 @@ li {
 
 #nav li {
     display: table-cell;
+    font-family: 'Raleway', sans-serif;
     width: 50%;
     padding-right: 1px;
     height: auto;
@@ -179,12 +180,14 @@ form {
 }
 #buttonSearch:hover {
   background-color: rgb(226, 155, 24);
+  border: none;
 }
 /************ end search bar**************/
 
 /************ styling list tracks**************/
 #result {
   padding-top: 130px;
+  padding-bottom: 70px;
 }
 
 #result ul{
@@ -213,11 +216,13 @@ li {
     /*border-top: 1px solid #282D2C;
     border-bottom: 1px solid #0C0D0D;*/
     cursor: pointer;
+    font-family: 'Raleway', sans-serif;
 }
 
 #listTracks {
   display: none;
   padding-top: 42px;
+  padding-bottom: 70px;
 }
 /************ end styling list tracks**************/
 
