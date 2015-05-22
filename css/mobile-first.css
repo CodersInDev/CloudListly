@@ -60,9 +60,9 @@ footer {
     position: fixed;
     bottom: 0;
     border-top:1px solid orange;
-
 }
 /************ end globals**************/
+
 
 /************ navigation tabs**************/
 ul {
@@ -293,4 +293,5 @@ li.info {
   z-index: -1;
 }
 /************ end player controls **************/
+
 
